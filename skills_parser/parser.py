@@ -5,6 +5,20 @@ import requests
 from django.core.exceptions import ValidationError
 
 
+class Repository(object):
+    # Defines age of repository in months
+    age: int
+    # Defines top 10 languages used in the project
+    languages: List[str]
+    # Repository name
+    name: str
+
+    def __init__(self, name, languages=[], age=0, *args, **kwargs):
+        self.name = name
+        self.languages = languages
+        self.age = age
+
+
 class UserParser(object):
     username: str
     repo_list: List[str]
@@ -13,6 +27,10 @@ class UserParser(object):
         self.username = username
         if not self.check_user_exists():
             raise ValidationError(message="Github user doesn't exists")
+
+    @classmethod
+    def response_has_errors(cls, response: dict) -> bool:
+        return response.get('message')
 
     def check_user_exists(self) -> bool:
         """Check that user with given name is registered on Github."""
@@ -39,7 +57,6 @@ class UserParser(object):
         # Needed in order to reduce the server load
         for repo in raw[:15]:
             parsed.append(repo['name'])
-        self.repo_list = parsed
         return parsed
 
     def get_repos(self) -> List[str]:
@@ -51,15 +68,15 @@ class UserParser(object):
                 'sort': 'pushed',
             }
         )
-        return __class__.parse_repos(response)
+        self.repo_list = __class__.parse_repos(response)
+        return self.repo_list
 
     def get_top_languages(self, repo_name: str) -> List[str]:
         response = requests.get(
             f'https://api.github.com/repos/{self.username}'
             f'/{repo_name}/languages'
         ).json()
-        # That repo doesn't exist
-        if response.get('message'):
+        if __class__.response_has_errors(response):
             return []
         # Return top ten languages
         return list(response)[:10]
