@@ -1,73 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-
-    <title>Resume Form - FreshInterns</title>
-    <meta content="" name="descriptison" />
-    <meta content="" name="keywords" />
-
-    <link href="assets/img/favicon.png" rel="icon" />
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
-
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-      rel="stylesheet"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-    <link href="assets/css/icofont.min.css" rel="stylesheet" />
-    <link href="assets/css/owl.carousel.min.css" rel="stylesheet" />
-    <link href="assets/css/aos.css" rel="stylesheet" />
-
-    <link href="assets/css/style.css" rel="stylesheet" />
-  </head>
-
-  <body>
-    <header id="header" class="fixed-top">
-      <div class="container d-flex">
-        <div class="logo mr-auto">
-          <a href="#">
-            <img src="assets/img/logo.svg" alt="" class="img-fluid" />
-            <h1 class="text-light">
-              <span>FreshInterns</span>
-            </h1>
-          </a>
-        </div>
-
-        <nav class="nav-menu d-none d-lg-block">
-          <ul>
-            <li>
-              <a href="index.html">Home</a>
-              <hr class="nav-underline" />
-            </li>
-            <li>
-              <a href="resume.html">Resume Form</a>
-              <hr class="nav-underline" />
-            </li>
-            <li>
-              <a href="about.html">About Us</a>
-              <hr class="nav-underline" />
-            </li>
-            <li>
-              <a href="contacts.html">Contacts</a>
-              <hr class="nav-underline" />
-            </li>
-          </ul>
-        </nav>
-
-        <div class="socials">
-          <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
-        </div>
-      </div>
-    </header>
-
+{% extends "base.html" %}
+{% block title %}Resume Form - FreshInterns{% endblock title %}
+{% block content %}
     <section id="hero">
       <div class="container">
         <div class="section-title" data-aos="fade-up">
@@ -88,7 +21,7 @@
               style="width: 100%;"
             >
               <form
-                action="forms/contact.php"
+                action=""
                 method="post"
                 role="form"
                 style="margin-left: 50%; transform: translateX(-50%);"
@@ -226,91 +159,4 @@
         </div>
       </section>
     </main>
-
-    <footer id="footer">
-      <div class="footer-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 col-md-12">
-              <div class="footer-info">
-                <h3>FreshInterns</h3>
-                lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                <div class="social-links mt-3">
-                  <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                  <a href="#" class="facebook"
-                    ><i class="bx bxl-facebook"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 footer-links">
-              <h4>Useful Links</h4>
-              <ul>
-                <li>
-                  <a href="#">Home</a>
-                </li>
-                <li>
-                  <a href="#">About us</a>
-                </li>
-                <li>
-                  <a href="#">Services</a>
-                </li>
-                <li>
-                  <a href="#">Terms of service</a>
-                </li>
-                <li>
-                  <a href="#">Privacy policy</a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="col-lg-3 col-md-6 footer-newsletter">
-              <h4>JOIN OUR NEWSLETTER</h4>
-              <p style="color: #576971; margin-top: -13px;">
-                one message per week
-              </p>
-              <form action="" method="post">
-                <input type="email" name="email" />
-                <br />
-                <input
-                  type="submit"
-                  value="Subscribe"
-                  style="border-radius: 2px; padding: 5px 15px;"
-                />
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="copyright">
-          &copy; Copyright <strong><span>FreshInterns</span></strong
-          >. All Rights Reserved
-        </div>
-      </div>
-    </footer>
-
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
-    <script src="assets/js/isotope.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/aos.js"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
-</html>
+{% endblock content %}
