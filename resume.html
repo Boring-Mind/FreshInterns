@@ -25,7 +25,7 @@
     <link href="assets/css/icofont.min.css" rel="stylesheet" />
     <link href="assets/css/owl.carousel.min.css" rel="stylesheet" />
     <link href="assets/css/aos.css" rel="stylesheet" />
-
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'><!--boxicons-->
     <link href="assets/css/style.css" rel="stylesheet" />
   </head>
 
@@ -33,7 +33,7 @@
     <header id="header" class="fixed-top">
       <div class="container d-flex">
         <div class="logo mr-auto">
-          <a href="#">
+          <a href="index.html">
             <img src="assets/img/logo.svg" alt="" class="img-fluid" />
             <h1 class="text-light">
               <span>FreshInterns</span>
@@ -46,7 +46,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="resume.html">Resume Form</a></li>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="contacts.html">Contacts</a></li>
+            <li><a href="contacts.html">Contact Us</a></li>
           </ul>
         </nav>
 
@@ -56,120 +56,55 @@
       </div>
     </header>
 
-    <main id="main" style="padding-top: 5em;">
-      <section id="contact" class="contact section-bg">
-        <div class="container">
-          <div class="section-title" data-aos="fade-up">
-            <h2>Fill in</h2>
-          </div>
-
-          <div class="row">
-            <div
-              class="d-flex align-items-stretch"
-              data-aos="fade-up"
-              style="width: 100%;"
-            >
-              <form
-                action="forms/contact.php"
-                method="post"
-                role="form"
-                style="margin-left: 50%; transform: translateX(-50%);"
-              >
-                <div class="form-row">
-                  <div class="form-group col-md-12">
-                    <div class="row">
-                      <label for="username" class="col-md-6"
-                        >Github username</label
-                      >
-                      <input
-                        type="text"
-                        name="username"
-                        class="form-control col-md-6"
-                        id="username"
-                        data-rule="minlen:4"
-                      />
-                    </div>
-                    <div class="validate"></div>
-                  </div>
-                  <div class="form-group col-md-12">
-                    <div class="row">
-                      <label for="firstname" class="col-md-6">First name</label>
-                      <input
-                        type="text"
-                        name="firstname"
-                        class="form-control col-md-6"
-                        id="firstname"
-                        data-rule="minlen:4"
-                        data-msg="Please enter at least 2 chars"
-                      />
-                    </div>
-                    <div class="validate"></div>
-                  </div>
-                  <div class="form-group col-md-12">
-                    <div class="row">
-                      <label for="secondname" class="col-md-6"
-                        >Second name</label
-                      >
-                      <input
-                        type="text"
-                        name="secondname"
-                        class="form-control col-md-6"
-                        id="secondname"
-                        data-rule="minlen:4"
-                        data-msg="Please enter at least 2 chars"
-                      />
-                    </div>
-                    <div class="validate"></div>
-                  </div>
-                  <div class="form-group col-md-12">
-                    <div class="row">
-                      <label for="role" class="col-md-6">Role</label>
-                    </div>
-                    <div class="validate"></div>
-                  </div>
-                  <div class="form-group col-md-12">
-                    <div class="row">
-                      <label for="name" class="col-md-6">Email</label>
-                      <input
-                        type="email"
-                        class="form-control col-md-6"
-                        name="email"
-                        id="email"
-                        data-rule="email"
-                        data-msg="Please enter a valid email"
-                      />
-                    </div>
-                    <div class="validate"></div>
-                  </div>
-                  <div class="form-group col-md-12">
-                    <div class="row">
-                      <label for="phone" class="col-md-6">Phone</label>
-                      <input
-                        type="text"
-                        class="form-control col-md-6"
-                        name="phone"
-                        id="phone"
-                        data-rule="minlen:4"
-                      />
-                    </div>
-                    <div class="validate"></div>
-                  </div>
-                </div>
-                <!-- <div class="mb-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">
-                    Your message has been sent. Thank you!
-                  </div>
-                </div> -->
-                <div class="text-center">
-                  <button type="submit" class="btn">Send Message</button>
-                </div>
-              </form>
-            </div>
-          </div>
+    <section id="hero" class="resume">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h1>Resume Form</h1>
+          <p>Fill out the details to hear from us soon !</p>
         </div>
-      </section>
+      </div>
+    </section>
+
+    <main id="main" class="main2" data-aos="fade-up">
+      <!--<h1>Resume Form</h1>-->
+            
+            <div id="resume">
+            <form action="process.php" class="resume">
+              <br>
+                <p><label for="name"> First Name:</label>
+                <input type="text" name="name" placeholder="Your first name" required></p>
+
+                <p><label for="name"> Last Name:</label>
+                <input type="text" name="name" placeholder="Your last name" required></p>
+
+                <p><label for="name"> E-mail:</label>
+                <input type="email" name="email" placeholder="Your E-mail" required></p>
+
+                <p><label for="role"> Role:</label>
+                    <select name="role" id="role" required>
+                      <option value="Select an Option" autofocus>Select an Option</option>
+                      <option value="Data Scientist">Data Scientist</option>
+                      <option value="Backend Developer">Backend Developer</option>
+                      <option value="Frontend Developer">Frontend Developer</option>
+                      <option value="Business Analyst">Business Analyst</option>
+                      <option value="Others">Others</option>
+
+                    </select></p>
+                
+                <p><label for="name"> GitHub Username:</label>
+                <input type="text" name="subject" placeholder="@github_username" required></p>
+
+                <p><label for="homepage"> LinkedIn URL:</label>
+                <input type="url" name="homepage" placeholder="www.linkedin.com/"></p> 
+                
+                <p><label for="contact"> Contact No:</label>
+                <input type="tel" name="contact" placeholder="Your contact number"></p>
+                
+                <p><input id="submit" type="submit" name="submit" value="Submit Form"></p>
+
+                
+            </form>
+          </div>
     </main>
 
     <footer id="footer">
@@ -193,19 +128,19 @@
             <div class="col-lg-3 col-md-6 footer-links">
               <h4>Useful Links</h4>
               <ul>
-                <li>
-                  <a href="#">Home</a>
+                <li><i class="bx bx-chevron-right"></i>
+                  <a href="index.html">Home</a>
                 </li>
-                <li>
-                  <a href="#">About us</a>
+                <li><i class="bx bx-chevron-right"></i>
+                  <a href="about.html">About us</a>
                 </li>
-                <li>
+                <li><i class="bx bx-chevron-right"></i>
                   <a href="#">Services</a>
                 </li>
-                <li>
+                <li><i class="bx bx-chevron-right"></i>
                   <a href="#">Terms of service</a>
                 </li>
-                <li>
+                <li><i class="bx bx-chevron-right"></i>
                   <a href="#">Privacy policy</a>
                 </li>
               </ul>
@@ -219,7 +154,8 @@
               <form action="" method="post">
                 <input type="email" name="email" />
                 <br />
-                <input type="submit" value="Subscribe" />
+                <!--<input type="submit" class="" value="Subscribe" />-->
+                <button type="submit" class="button button-contactForm boxed-btn subscribebtn">Subscribe</button>
               </form>
             </div>
           </div>
@@ -253,5 +189,6 @@
     <script src="assets/js/owl.carousel.min.js"></script>
     <script src="assets/js/aos.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/navbar.js"></script>
   </body>
 </html>

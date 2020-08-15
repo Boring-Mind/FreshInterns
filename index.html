@@ -25,7 +25,7 @@
     <link href="assets/css/icofont.min.css" rel="stylesheet" />
     <link href="assets/css/owl.carousel.min.css" rel="stylesheet" />
     <link href="assets/css/aos.css" rel="stylesheet" />
-
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'><!--boxicons-->
     <link href="assets/css/style.css" rel="stylesheet" />
   </head>
 
@@ -33,7 +33,7 @@
     <header id="header" class="fixed-top">
       <div class="container d-flex">
         <div class="logo mr-auto">
-          <a href="#">
+          <a href="index.html">
             <img src="assets/img/logo.svg" alt="" class="img-fluid" />
             <h1 class="text-light">
               <span>FreshInterns</span>
@@ -43,22 +43,10 @@
 
         <nav class="nav-menu d-none d-lg-block">
           <ul>
-            <li>
-              <a href="index.html">Home</a>
-              <hr class="nav-underline" />
-            </li>
-            <li>
-              <a href="resume.html">Resume Form</a>
-              <hr class="nav-underline" />
-            </li>
-            <li>
-              <a href="about.html">About Us</a>
-              <hr class="nav-underline" />
-            </li>
-            <li>
-              <a href="contacts.html">Contacts</a>
-              <hr class="nav-underline" />
-            </li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume Form</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contacts.html">Contact Us</a></li>
           </ul>
         </nav>
 
@@ -84,6 +72,7 @@
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </h2>
+              <a href="#about" class="btn-get-started scrollto">Get Started</a>
             </div>
           </div>
         </div>
@@ -91,38 +80,15 @@
     </section>
 
     <main id="main">
-      <section id="about" class="about">
-        <div class="container">
-          <div class="row">
-            <div
-              class="col-lg-6 d-flex flex-column justify-contents-center"
-              data-aos="fade-up"
-            >
-              <div class="content pt-4 pt-lg-0">
-                <h3>Lorem Ipsum</h3>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                  aute irure dolor in reprehenderit in voluptate tera noden
-                  carma palorp mades tera.
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-6" data-aos="zoom-in">
-              <img src="assets/img/about.jpg" class="img-fluid" alt="" />
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section id="ww-section" class="ww-section section-bg">
         <div class="container">
           <div class="section-title" data-aos="fade-up">
             <h2>We work with</h2>
           </div>
 
-          <div class="row" style="padding-bottom: 2em;">
+          <div class="row">
             <div
-              class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0"
+              class="col-md-4 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0"
               data-aos="zoom-in"
             >
               <div class="icon-box">
@@ -133,7 +99,7 @@
             </div>
 
             <div
-              class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0"
+              class="col-md-4 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0"
               data-aos="zoom-in"
               data-aos-delay="100"
             >
@@ -145,7 +111,7 @@
             </div>
 
             <div
-              class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0"
+              class="col-md-4 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0"
               data-aos="zoom-in"
               data-aos-delay="200"
             >
@@ -157,7 +123,7 @@
             </div>
 
             <div
-              class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0"
+              class="col-md-4 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0"
               data-aos="zoom-in"
               data-aos-delay="300"
             >
@@ -167,11 +133,29 @@
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="row">
-            <div class="d-flex" data-aos="zoom-in">
-              <a href="resume.html" class="btn">Apply for a Job</a>
+            <div
+              class="col-md-4 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0"
+              data-aos="zoom-in"
+              data-aos-delay="400"
+            >
+              <div class="icon-box">
+                <div class="icon">
+                  <i class="icofont-brand-adobe"></i>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-md-4 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0"
+              data-aos="zoom-in"
+              data-aos-delay="500"
+            >
+              <div class="icon-box">
+                <div class="icon">
+                  <i class="icofont-brand-google"></i>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -189,9 +173,9 @@
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 <div class="social-links mt-3">
                   <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                  <a href="#" class="facebook">
-                    <i class="bx bxl-facebook"></i>
-                  </a>
+                  <a href="#" class="facebook"
+                    ><i class="bx bxl-facebook"></i
+                  ></a>
                 </div>
               </div>
             </div>
@@ -199,16 +183,19 @@
             <div class="col-lg-3 col-md-6 footer-links">
               <h4>Useful Links</h4>
               <ul>
-                <li>
-                  <a href="#">Home</a>
+                <li><i class="bx bx-chevron-right"></i>
+                  <a href="index.html">Home</a>
                 </li>
-                <li>
-                  <a href="#">About us</a>
+                <li><i class="bx bx-chevron-right"></i>
+                  <a href="about.html">About us</a>
                 </li>
-                <li>
+                <li><i class="bx bx-chevron-right"></i>
+                  <a href="#">Services</a>
+                </li>
+                <li><i class="bx bx-chevron-right"></i>
                   <a href="#">Terms of service</a>
                 </li>
-                <li>
+                <li><i class="bx bx-chevron-right"></i>
                   <a href="#">Privacy policy</a>
                 </li>
               </ul>
@@ -216,17 +203,14 @@
 
             <div class="col-lg-3 col-md-6 footer-newsletter">
               <h4>JOIN OUR NEWSLETTER</h4>
-              <p style="color: #576971; margin-top: -13px;">
+              <p>
                 one message per week
               </p>
               <form action="" method="post">
                 <input type="email" name="email" />
                 <br />
-                <input
-                  type="submit"
-                  value="Subscribe"
-                  style="border-radius: 2px; padding: 5px 15px;"
-                />
+                <!--<input type="submit" class="" value="Subscribe" />-->
+                <button type="submit" class="button button-contactForm boxed-btn subscribebtn">Subscribe</button>
               </form>
             </div>
           </div>
@@ -260,5 +244,6 @@
     <script src="assets/js/owl.carousel.min.js"></script>
     <script src="assets/js/aos.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/navbar.js"></script>
   </body>
 </html>
