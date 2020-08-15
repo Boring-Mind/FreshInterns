@@ -9,7 +9,10 @@ class InternFormView(CreateView):
     template_name = 'resume.html'
     form_class = UserProfileForm
 
-    def get_success_url(self):
-        context = make_context(self.cleaned_data)
+    def form_valid(self, form):
+        context = make_context(form.cleaned_data)
         send_email(context)
+        return super().form_valid(form)
+
+    def get_success_url(self):
         return reverse('index')
