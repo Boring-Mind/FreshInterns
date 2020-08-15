@@ -38,6 +38,7 @@ class UserProfileForm(forms.ModelForm):
         widget=forms.EmailInput(attrs={'class': 'form-control col-md-6'})
     )
     phone = forms.CharField(
+        required=False,
         widget=forms.TextInput(attrs={'class': 'form-control col-md-6'}),
         validators=[
             RegexValidator(

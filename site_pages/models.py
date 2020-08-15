@@ -7,4 +7,4 @@ class UserProfile(models.Model):
     second_name = models.CharField(max_length=120)
     role = models.CharField(max_length=60)
     email = models.EmailField()
-    phone = models.CharField(max_length=15)
+    phone = models.CharField(max_length=15, blank=True)
