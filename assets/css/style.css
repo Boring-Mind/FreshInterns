@@ -357,6 +357,17 @@ section {
   overflow: hidden;
 }
 
+section #contact {
+  width: 80%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.contact-title {
+  text-align: center;
+  padding-bottom: 60px;
+}
+
 .section-bg {
   background-color: #f7f8f9;
 }
