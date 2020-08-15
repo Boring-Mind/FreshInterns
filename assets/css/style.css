@@ -169,7 +169,24 @@ h6 {
 }
 
 .nav-underline {
+  opacity: 0;
   border: 1px solid limegreen;
+  transition: opacity 0.2s ease;
+}
+
+.footer-links ul li::before {
+  opacity: 0;
+  content: '';
+  background: limegreen;
+  width: 5px;
+  height: 5px;
+  margin-right: 10px;
+  border-radius: 100%;
+  left: calc(50% - 8px);
+  transition: opacity 0.2s ease;
+}
+.footer-links ul li:hover::before {
+  opacity: 1;
 }
 
 /* Mobile Navigation */
