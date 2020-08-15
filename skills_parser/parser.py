@@ -29,7 +29,7 @@ class UserParser(object):
         return sorted(repos, key=itemgetter(field), reverse=True)
 
     @classmethod
-    def parse_user_repos(cls, response: Dict[str, str]) -> List[str]:
+    def parse_repos(cls, response: Dict[str, str]) -> List[str]:
         """Parse retrieved user repo list."""
         raw = response.json()
         raw = __class__.sort_repos_by('size', raw)
@@ -42,18 +42,24 @@ class UserParser(object):
         self.repo_list = parsed
         return parsed
 
-    def get_user_repos(self) -> List[str]:
+    def get_repos(self) -> List[str]:
         """Retrieve and parse user repo list."""
         # Get up to 100 latest repos
         response = requests.get(
-            'https://api.github.com/users/' +
-            self.username +
-            '/repos',
+            f'https://api.github.com/users/{self.username}/repos',
             params={
                 'sort': 'pushed',
             }
         )
-        return __class__.parse_user_repos(response)
+        return __class__.parse_repos(response)
 
-    def get_top_languages(self) -> List[str]:
-        pass
+    def get_top_languages(self, repo_name: str) -> List[str]:
+        response = requests.get(
+            f'https://api.github.com/repos/{self.username}'
+            f'/{repo_name}/languages'
+        ).json()
+        # That repo doesn't exist
+        if response.get('message'):
+            return []
+        # Return top ten languages
+        return list(response)[:10]
