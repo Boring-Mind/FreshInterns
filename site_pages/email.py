@@ -10,27 +10,26 @@ if EmailTemplate.objects.filter(name='interns').count() == 0:
         name='interns',
         subject='Internship candidates',
         content="""Dear Sir/Madam,
-            I am writing to let you know that we have a new keen intern for you!
-            Maybe you'll find that our candidate is a skilled developer.
-            
-            Short information about the applicant
-            
-            {{ first_name }} {{ second_name }}
-            {{ role }}
-            
-            Contacts:
-            {{ phone_number }}
-            {{ email }}
-            {{ github }}
-            
-            He has proven experience in these technologies:
-            {{ skills }}
-            
-            Please contact with him/her if you are interested in that candidate!
-            
-            Kind regards,
-            FreshInterns Co.
-        """,
+I am writing to let you know that we have a new keen intern for you!
+Maybe you'll find that our candidate is a skilled developer.
+
+Short information about the applicant
+
+{{ first_name }} {{ second_name }}
+{{ role }}
+
+Contacts:
+{{ phone_number }}
+{{ email }}
+{{ github }}
+
+He has proven experience in these technologies:
+{{ skills }}
+
+Please contact with him/her if you are interested in that candidate!
+
+Kind regards,
+FreshInterns Co.""",
     )
 
 
