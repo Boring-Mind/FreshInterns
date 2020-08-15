@@ -1,5 +1,5 @@
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #444444;
 }
 
@@ -18,7 +18,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 #header {
@@ -37,7 +37,7 @@ h6 {
 #header .logo h1 {
   font-size: 25px;
   margin: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 #header .logo a {
@@ -92,7 +92,7 @@ h6 {
   padding: 10px 15px;
   transition: 0.3s;
   font-size: 15px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .nav-menu a:hover,
@@ -141,7 +141,7 @@ h6 {
 }
 
 .nav-menu .drop-down > a:after {
-  content: "\ea99";
+  content: '\ea99';
   font-family: IcoFont;
   padding-left: 5px;
 }
@@ -162,10 +162,14 @@ h6 {
 }
 
 .nav-menu .drop-down .drop-down > a:after {
-  content: "\eaa0";
+  content: '\eaa0';
   font-family: IcoFont;
   position: absolute;
   right: 15px;
+}
+
+.nav-underline {
+  border: 1px solid limegreen;
 }
 
 /* Mobile Navigation */
@@ -226,7 +230,7 @@ h6 {
 }
 
 .mobile-nav .drop-down > a:after {
-  content: "\ea99";
+  content: '\ea99';
   font-family: IcoFont;
   padding-left: 10px;
   position: absolute;
@@ -234,7 +238,7 @@ h6 {
 }
 
 .mobile-nav .active.drop-down > a:after {
-  content: "\eaa1";
+  content: '\eaa1';
 }
 
 .mobile-nav .drop-down > a {
@@ -278,7 +282,7 @@ h6 {
 
 #hero {
   width: 100%;
-  background-image: url("../img/header-background.png");
+  background-image: url('../img/header-background.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right top;
@@ -301,7 +305,7 @@ h6 {
 }
 
 #hero .btn-get-started {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 600;
   font-size: 13px;
   text-transform: uppercase;
@@ -345,7 +349,7 @@ section {
   font-weight: 400;
   margin-bottom: 20px;
   padding-bottom: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #627680;
 }
 
@@ -442,7 +446,7 @@ section {
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: #576971;
 }
 
@@ -518,11 +522,11 @@ section {
   text-align: center;
 }
 
-#footer .footer-top .footer-newsletter form input[type="email"] {
+#footer .footer-top .footer-newsletter form input[type='email'] {
   padding: 3px 10px;
   border: 1px solid #ccc;
 }
-#footer .footer-top .footer-newsletter form input[type="submit"] {
+#footer .footer-top .footer-newsletter form input[type='submit'] {
   margin-top: 10px;
   border: 0;
   background: none;
@@ -582,6 +586,6 @@ section {
     left: -100%;
   }
   .nav-menu .drop-down .drop-down > a:after {
-    content: "\ea9d";
+    content: '\ea9d';
   }
 }
