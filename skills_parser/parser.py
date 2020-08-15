@@ -26,8 +26,6 @@ class RepoParser(object):
 
     def __init__(self, username, *args, **kwargs):
         self.username = username
-        if not __class__.check_user_exists(username):
-            raise ValidationError(message="Github user doesn't exists")
 
     @classmethod
     def response_has_errors(cls, response: dict) -> bool:

@@ -54,6 +54,7 @@ class UserProfileForm(forms.ModelForm):
         username = self.cleaned_data['github']
         if not RepoParser.check_user_exists(username):
             raise ValidationError(message="Github user doesn't exists")
+        return username
 
 
     class Meta:
