@@ -26,119 +26,58 @@
                 role="form"
                 style="margin-left: 50%; transform: translateX(-50%);"
               >
+              {{ form.non_field_errors }}
+              {% csrf_token %}
                 <div class="form-row">
                   <div class="form-group col-md-12">
                     <div class="row">
+                      {{ form.github.errors }}
                       <label for="username" class="col-md-6"
                         >Github username</label
                       >
-                      <input
-                        type="text"
-                        name="username"
-                        class="form-control col-md-6"
-                        id="username"
-                        data-rule="minlen:4"
-                      />
+                      {{ form.github }}
                     </div>
                     <div class="validate"></div>
                   </div>
                   <div class="form-group col-md-12">
                     <div class="row">
+                      {{ form.first_name.errors }}
                       <label for="firstname" class="col-md-6">First name</label>
-                      <input
-                        type="text"
-                        name="firstname"
-                        class="form-control col-md-6"
-                        id="firstname"
-                        data-rule="minlen:4"
-                        data-msg="Please enter at least 2 chars"
-                      />
+                      {{ form.first_name }}
                     </div>
                     <div class="validate"></div>
                   </div>
                   <div class="form-group col-md-12">
                     <div class="row">
+                      {{ form.second_name.errors }}
                       <label for="secondname" class="col-md-6"
                         >Second name</label
                       >
-                      <input
-                        type="text"
-                        name="secondname"
-                        class="form-control col-md-6"
-                        id="secondname"
-                        data-rule="minlen:4"
-                        data-msg="Please enter at least 2 chars"
-                      />
+                      {{ form.second_name }}
                     </div>
                     <div class="validate"></div>
                   </div>
                   <div class="form-group col-md-12">
                     <div class="row">
+                      {{ form.role.errors }}
                       <label for="role" class="col-md-6">Role</label>
-                      <select class="dropdown">
-                        <option value="">Select Role ...</option>
-                        <option value="Data Scientist">Data Scientist</option>
-                        <option value="Backend Developer"
-                          >Backend Developer</option
-                        >
-                        <option value="Frontend Developer"
-                          >Frontend Developer</option
-                        >
-                        <option value="FullStack Developer"
-                          >FullStack Developer</option
-                        >
-                        <option value="Quality Assurance"
-                          >Quality Assurance</option
-                        >
-                        <option value="DB Administrator"
-                          >DB Administrator</option
-                        >
-                        <option value="DevOps">DevOps</option>
-                        <option value="Data Analyst">Data Analyst</option>
-                        <option value="Data Scientist">Data Scientist</option>
-                        <option value="Big Data Engineer"
-                          >Big Data Engineer</option
-                        >
-                        <option value="Blockchain Developer"
-                          >Blockchain Developer</option
-                        >
-                        <option value="Software Architect"
-                          >Software Architect</option
-                        >
-                        <option value="Penetration Tester"
-                          >Penetration Tester</option
-                        >
-                        <option value="Security Engineer"
-                          >Security Engineer</option
-                        >
-                      </select>
+                      {{ form.role }}
                     </div>
                     <div class="validate"></div>
                   </div>
                   <div class="form-group col-md-12">
                     <div class="row">
+                      {{ form.email.errors }}
                       <label for="name" class="col-md-6">Email</label>
-                      <input
-                        type="email"
-                        class="form-control col-md-6"
-                        name="email"
-                        id="email"
-                        data-rule="email"
-                        data-msg="Please enter a valid email"
-                      />
+                      {{ form.email }}
                     </div>
                     <div class="validate"></div>
                   </div>
                   <div class="form-group col-md-12">
                     <div class="row">
+                      {{ form.phone.errors }}
                       <label for="phone" class="col-md-6">Phone</label>
-                      <input
-                        type="text"
-                        class="form-control col-md-6"
-                        name="phone"
-                        id="phone"
-                        data-rule="minlen:4"
-                      />
+                      {{ form.phone }}
                     </div>
                     <div class="validate"></div>
                   </div>
