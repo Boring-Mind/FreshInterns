@@ -13,3 +13,15 @@ class ParserTest(TestCase):
         up = RepoParser('Boring-Mind')
         languages = up.get_top_languages('DoesNotExist')
         self.assertEqual(len(languages), 0)
+
+    def test_user_doesnt_exist(self):
+        result = RepoParser.check_user_exists(
+            'cbsajcnasxsla,lkjclncaksjlchnkans,knasc'
+        )
+        self.assertFalse(result)
+
+    def test_user_exists(self):
+        result = RepoParser.check_user_exists(
+            'Boring-Mind'
+        )
+        self.assertTrue(result)

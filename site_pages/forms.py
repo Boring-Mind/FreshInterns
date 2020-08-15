@@ -1,5 +1,7 @@
 from django import forms
+from django.core.exceptions import ValidationError
 from django.core.validators import RegexValidator
+from skills_parser.parser import RepoParser
 
 from .models import UserProfile
 
@@ -47,6 +49,12 @@ class UserProfileForm(forms.ModelForm):
             )
         ]
     )
+
+    def clean_github(self):
+        username = self.cleaned_data['github']
+        if not RepoParser.check_user_exists(username):
+            raise ValidationError(message="Github user doesn't exists")
+
 
     class Meta:
         model = UserProfile

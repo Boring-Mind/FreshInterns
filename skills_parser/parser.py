@@ -26,17 +26,18 @@ class RepoParser(object):
 
     def __init__(self, username, *args, **kwargs):
         self.username = username
-        if not self.check_user_exists():
+        if not __class__.check_user_exists(username):
             raise ValidationError(message="Github user doesn't exists")
 
     @classmethod
     def response_has_errors(cls, response: dict) -> bool:
         return response.get('message')
 
-    def check_user_exists(self) -> bool:
+    @classmethod
+    def check_user_exists(cls, username: str) -> bool:
         """Check that user with given name is registered on Github."""
         response = requests.get(
-            'https://api.github.com/users/' + self.username
+            'https://api.github.com/users/' + username
         ).json()
         # If there is no error message return True
         return not response.get('message', None)
