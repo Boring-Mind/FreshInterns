@@ -18,11 +18,25 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
 from django.views.generic import TemplateView
+from site_pages.views import InternFormView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name="index.html"), name='index'),
-    path('about/', TemplateView.as_view(template_name="about.html"), name='about'),
-    path('contacts/', TemplateView.as_view(template_name="contacts.html"), name='contacts'),
-    path('resume/', TemplateView.as_view(template_name="resume.html"), name='resume'),
+    path(
+        '',
+        TemplateView.as_view(template_name="index.html"),
+        name='index'
+    ),
+    path(
+        'about/',
+        TemplateView.as_view(template_name="about.html"),
+        name='about'
+    ),
+    path(
+        'contacts/',
+        TemplateView.as_view(template_name="contacts.html"),
+        name='contacts'
+    ),
+    # path('resume/', TemplateView.as_view(template_name="resume.html"), name='resume'),
+    path('resume/', InternFormView.as_view(), name='resume'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
