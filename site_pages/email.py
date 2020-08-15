@@ -44,7 +44,7 @@ def get_skill_set(self, username: str) -> Dict[str, int]:
 def render_skill_list(skills: dict) -> str:
     result = ''
     for i, s in enumerate(skills.keys()):
-        result += f'{i}. {s} - ' + skills[s] + ' months;\n'
+        result += f'{i}. {s} - ' + str(skills[s]) + ' months;\n'
     return result
 
 def make_context(cleaned_data: dict) -> dict:
