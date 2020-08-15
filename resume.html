@@ -56,9 +56,121 @@
       </div>
     </header>
 
-    <section id="hero"></section>
+    <main id="main" style="padding-top: 5em;">
+      <section id="contact" class="contact section-bg">
+        <div class="container">
+          <div class="section-title" data-aos="fade-up">
+            <h2>Fill in</h2>
+          </div>
 
-    <main id="main"></main>
+          <div class="row">
+            <div
+              class="d-flex align-items-stretch"
+              data-aos="fade-up"
+              style="width: 100%;"
+            >
+              <form
+                action="forms/contact.php"
+                method="post"
+                role="form"
+                style="margin-left: 50%; transform: translateX(-50%);"
+              >
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <div class="row">
+                      <label for="username" class="col-md-6"
+                        >Github username</label
+                      >
+                      <input
+                        type="text"
+                        name="username"
+                        class="form-control col-md-6"
+                        id="username"
+                        data-rule="minlen:4"
+                      />
+                    </div>
+                    <div class="validate"></div>
+                  </div>
+                  <div class="form-group col-md-12">
+                    <div class="row">
+                      <label for="firstname" class="col-md-6">First name</label>
+                      <input
+                        type="text"
+                        name="firstname"
+                        class="form-control col-md-6"
+                        id="firstname"
+                        data-rule="minlen:4"
+                        data-msg="Please enter at least 2 chars"
+                      />
+                    </div>
+                    <div class="validate"></div>
+                  </div>
+                  <div class="form-group col-md-12">
+                    <div class="row">
+                      <label for="secondname" class="col-md-6"
+                        >Second name</label
+                      >
+                      <input
+                        type="text"
+                        name="secondname"
+                        class="form-control col-md-6"
+                        id="secondname"
+                        data-rule="minlen:4"
+                        data-msg="Please enter at least 2 chars"
+                      />
+                    </div>
+                    <div class="validate"></div>
+                  </div>
+                  <div class="form-group col-md-12">
+                    <div class="row">
+                      <label for="role" class="col-md-6">Role</label>
+                    </div>
+                    <div class="validate"></div>
+                  </div>
+                  <div class="form-group col-md-12">
+                    <div class="row">
+                      <label for="name" class="col-md-6">Email</label>
+                      <input
+                        type="email"
+                        class="form-control col-md-6"
+                        name="email"
+                        id="email"
+                        data-rule="email"
+                        data-msg="Please enter a valid email"
+                      />
+                    </div>
+                    <div class="validate"></div>
+                  </div>
+                  <div class="form-group col-md-12">
+                    <div class="row">
+                      <label for="phone" class="col-md-6">Phone</label>
+                      <input
+                        type="text"
+                        class="form-control col-md-6"
+                        name="phone"
+                        id="phone"
+                        data-rule="minlen:4"
+                      />
+                    </div>
+                    <div class="validate"></div>
+                  </div>
+                </div>
+                <!-- <div class="mb-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">
+                    Your message has been sent. Thank you!
+                  </div>
+                </div> -->
+                <div class="text-center">
+                  <button type="submit" class="btn">Send Message</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer id="footer">
       <div class="footer-top">
