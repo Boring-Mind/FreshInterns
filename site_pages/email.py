@@ -1,12 +1,13 @@
 from typing import Dict
 
+from django.conf import settings
 from post_office import mail
 from skills_parser.parser import RepoParser
 
 
 def send_email(context: dict):
     mail.send(
-        ['super.d3280@ya.ru'],
+        settings.EMAIL_ENTERPRISES,
         'FreshInterns <freshinternships@gmail.com>',
         subject='Internship candidates',
         message="""Dear Sir/Madam,

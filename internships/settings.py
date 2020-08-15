@@ -93,6 +93,10 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+EMAIL_ENTERPRISES = config(
+    'EMAIL_ENTERPRISES',
+    cast=lambda v: [s.strip() for s in v.split(',')]
+)
 
 
 # Password validation
