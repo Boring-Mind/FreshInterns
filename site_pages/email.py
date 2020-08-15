@@ -25,7 +25,7 @@ if EmailTemplate.objects.filter(name='interns').count() == 0:
         {{ github }}
 
         He has proven experience in these technologies:
-        {{ skills }}
+{{ skills }}
 
         Please contact with him/her if you are interested in that candidate!
 
@@ -52,7 +52,7 @@ def get_skill_set(self, username: str) -> Dict[str, int]:
 def render_skill_list(skills: dict) -> str:
     result = ''
     for i, s in enumerate(skills.keys()):
-        result += f'{i + 1}. {s} - ' + str(skills[s]) + ' months;\n'
+        result += f'\t\t{i + 1}. {s} - ' + str(skills[s]) + ' months;\n'
     return result
 
 def make_context(cleaned_data: dict) -> dict:
