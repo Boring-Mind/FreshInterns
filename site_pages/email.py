@@ -9,27 +9,29 @@ if EmailTemplate.objects.filter(name='interns').count() == 0:
     EmailTemplate.objects.create(
         name='interns',
         subject='Internship candidates',
-        content="""Dear Sir/Madam,
-I am writing to let you know that we have a new keen intern for you!
-Maybe you'll find that our candidate is a skilled developer.
+        content="""
+        Dear Sir/Madam,
+        I am writing to let you know that we have a new keen intern for you!
+        Maybe you'll find that our candidate is a skilled developer.
 
-Short information about the applicant
+        Short information about the applicant
 
-{{ first_name }} {{ second_name }}
-{{ role }}
+        {{ first_name }} {{ second_name }}
+        {{ role }}
 
-Contacts:
-{{ phone_number }}
-{{ email }}
-{{ github }}
+        Contacts:
+        {{ phone_number }}
+        {{ email }}
+        {{ github }}
 
-He has proven experience in these technologies:
-{{ skills }}
+        He has proven experience in these technologies:
+        {{ skills }}
 
-Please contact with him/her if you are interested in that candidate!
+        Please contact with him/her if you are interested in that candidate!
 
-Kind regards,
-FreshInterns Co.""",
+        Kind regards,
+        FreshInterns Co.
+        """,
     )
 
 
@@ -50,7 +52,7 @@ def get_skill_set(self, username: str) -> Dict[str, int]:
 def render_skill_list(skills: dict) -> str:
     result = ''
     for i, s in enumerate(skills.keys()):
-        result += f'{i}. {s} - ' + str(skills[s]) + ' months;\n'
+        result += f'{i + 1}. {s} - ' + str(skills[s]) + ' months;\n'
     return result
 
 def make_context(cleaned_data: dict) -> dict:
