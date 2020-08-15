@@ -297,6 +297,25 @@ h6 {
   color: #fff;
 }
 
+.btn {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 3px;
+  transition: 0.5s;
+  color: #fff;
+  background: #059142;
+}
+
+.btn:hover {
+  color: black;
+  background: #008bd1;
+}
+
 #hero {
   width: 100%;
   background-image: url('../img/header-background.png');
@@ -319,24 +338,6 @@ h6 {
   color: #576971;
   margin-bottom: 30px;
   font-size: 24px;
-}
-
-#hero .btn-get-started {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 600;
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 12px 28px;
-  border-radius: 3px;
-  transition: 0.5s;
-  color: #fff;
-  background: #059142;
-}
-
-#hero .btn-get-started:hover {
-  background: #008bd1;
 }
 
 #hero .hero-img {
@@ -402,6 +403,11 @@ section {
   width: 50%;
   margin-left: 50%;
   transform: translateX(-50%);
+}
+
+.ww-section .row,
+.ww-section .row div {
+  justify-content: center;
 }
 
 .ww-section .icon i {
