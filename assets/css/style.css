@@ -316,6 +316,10 @@ h6 {
   background: #008bd1;
 }
 
+.dropdown {
+  display: flex;
+}
+
 #hero {
   width: 100%;
   background-image: url('../img/header-background.png');
@@ -351,6 +355,17 @@ h6 {
 section {
   padding: 60px 0;
   overflow: hidden;
+}
+
+section #contact {
+  width: 80%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.contact-title {
+  text-align: center;
+  padding-bottom: 60px;
 }
 
 .section-bg {
@@ -503,6 +518,13 @@ section {
   font-style: italic;
   display: block;
   font-size: 13px;
+}
+
+.dropdown {
+  width: 50%;
+  padding: 6px 0;
+  border: 1px solid #ccc;
+  outline: 10px;
 }
 
 /* 

@@ -43,10 +43,22 @@
 
         <nav class="nav-menu d-none d-lg-block">
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="resume.html">Resume Form</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contacts.html">Contacts</a></li>
+            <li>
+              <a href="index.html">Home</a>
+              <hr class="nav-underline" />
+            </li>
+            <li>
+              <a href="resume.html">Resume Form</a>
+              <hr class="nav-underline" />
+            </li>
+            <li>
+              <a href="about.html">About Us</a>
+              <hr class="nav-underline" />
+            </li>
+            <li>
+              <a href="contacts.html">Contacts</a>
+              <hr class="nav-underline" />
+            </li>
           </ul>
         </nav>
 
@@ -56,17 +68,23 @@
       </div>
     </header>
 
-    <main id="main" style="padding-top: 5em;">
-      <section id="contact" class="contact section-bg">
-        <div class="container">
-          <div class="section-title" data-aos="fade-up">
-            <h2>Fill in</h2>
-          </div>
+    <section id="hero">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h1>Resume Form</h1>
+          <p>Lorem ipsum</p>
+        </div>
+      </div>
+    </section>
 
+    <main id="main">
+      <section id="resume" class="resume">
+        <div class="container">
           <div class="row">
             <div
               class="d-flex align-items-stretch"
               data-aos="fade-up"
+              data-aos-delay="100"
               style="width: 100%;"
             >
               <form
@@ -124,6 +142,43 @@
                   <div class="form-group col-md-12">
                     <div class="row">
                       <label for="role" class="col-md-6">Role</label>
+                      <select class="dropdown">
+                        <option value="">Select Role ...</option>
+                        <option value="Data Scientist">Data Scientist</option>
+                        <option value="Backend Developer"
+                          >Backend Developer</option
+                        >
+                        <option value="Frontend Developer"
+                          >Frontend Developer</option
+                        >
+                        <option value="FullStack Developer"
+                          >FullStack Developer</option
+                        >
+                        <option value="Quality Assurance"
+                          >Quality Assurance</option
+                        >
+                        <option value="DB Administrator"
+                          >DB Administrator</option
+                        >
+                        <option value="DevOps">DevOps</option>
+                        <option value="Data Analyst">Data Analyst</option>
+                        <option value="Data Scientist">Data Scientist</option>
+                        <option value="Big Data Engineer"
+                          >Big Data Engineer</option
+                        >
+                        <option value="Blockchain Developer"
+                          >Blockchain Developer</option
+                        >
+                        <option value="Software Architect"
+                          >Software Architect</option
+                        >
+                        <option value="Penetration Tester"
+                          >Penetration Tester</option
+                        >
+                        <option value="Security Engineer"
+                          >Security Engineer</option
+                        >
+                      </select>
                     </div>
                     <div class="validate"></div>
                   </div>
@@ -163,7 +218,7 @@
                   </div>
                 </div> -->
                 <div class="text-center">
-                  <button type="submit" class="btn">Send Message</button>
+                  <button type="submit" class="btn">Submit</button>
                 </div>
               </form>
             </div>
@@ -213,13 +268,17 @@
 
             <div class="col-lg-3 col-md-6 footer-newsletter">
               <h4>JOIN OUR NEWSLETTER</h4>
-              <p>
+              <p style="color: #576971; margin-top: -13px;">
                 one message per week
               </p>
               <form action="" method="post">
                 <input type="email" name="email" />
                 <br />
-                <input type="submit" value="Subscribe" />
+                <input
+                  type="submit"
+                  value="Subscribe"
+                  style="border-radius: 2px; padding: 5px 15px;"
+                />
               </form>
             </div>
           </div>
