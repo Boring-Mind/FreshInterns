@@ -67,7 +67,6 @@ class RepoParser(object):
         raw = response.json()
         raw = __class__.sort_repos_by('size', raw)
 
-        import pdb; pdb.set_trace()
         # Select 15 biggest repos
         # Needed in order to reduce the server load
         ages = __class__.get_repos_age(raw[:15])
@@ -110,3 +109,17 @@ class RepoParser(object):
             return []
         # Return top ten languages
         return list(response)[:10]
+
+    def get_skills_list(self) -> Dict[str, int]:
+        """Get list of skills in format: 'skill_name': month_of_experience.
+
+        Needs to call after the get_repos method.
+        """
+        skills = {}
+        for r in self.repo_list:
+            for l in r.languages:
+                if skills.get(l):
+                    skills[l] += r.age
+                else:
+                    skills[l] = r.age
+        return skills
