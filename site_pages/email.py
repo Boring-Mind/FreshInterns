@@ -2,36 +2,42 @@ from typing import Dict
 
 from django.conf import settings
 from post_office import mail
+from post_office.models import EmailTemplate
 from skills_parser.parser import RepoParser
+
+EmailTemplate.objects.create(
+    name='interns',
+    subject='Internship candidates',
+    content="""Dear Sir/Madam,
+        I am writing to let you know that we have a new keen intern for you!
+        Maybe you'll find that our candidate is a skilled developer.
+        
+        Short information about the applicant
+        
+        {{ first_name }} {{ second_name }}
+        {{ role }}
+        
+        Contacts:
+        {{ phone_number }}
+        {{ email }}
+        {{ github }}
+        
+        He has proven experience in these technologies:
+        {{ skills }}
+        
+        Please contact with him/her if you are interested in that candidate!
+        
+        Kind regards,
+        FreshInterns Co.
+    """,
+)
 
 
 def send_email(context: dict):
     mail.send(
         settings.EMAIL_ENTERPRISES,
         'FreshInterns <freshinternships@gmail.com>',
-        subject='Internship candidates',
-        message="""Dear Sir/Madam,
-            I am writing to let you know that we have a new keen intern for you!
-            Maybe you'll find that our candidate is a skilled developer.
-            
-            Short information about the applicant
-            
-            {{ first_name }} {{ second_name }}
-            {{ role }}
-            
-            Contacts:
-            {{ phone_number }}
-            {{ email }}
-            {{ github }}
-            
-            He has proven experience in these technologies:
-            {{ skills }}
-            
-            Please contact with him/her if you are interested in that candidate!
-            
-            Kind regards,
-            FreshInterns Co.
-        """,
+        template='interns',
         context=context,
     )
 
