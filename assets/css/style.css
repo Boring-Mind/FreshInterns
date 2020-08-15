@@ -316,6 +316,10 @@ h6 {
   background: #008bd1;
 }
 
+.dropdown {
+  display: flex;
+}
+
 #hero {
   width: 100%;
   background-image: url('../img/header-background.png');
