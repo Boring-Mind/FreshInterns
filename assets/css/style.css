@@ -520,6 +520,13 @@ section #contact {
   font-size: 13px;
 }
 
+.dropdown {
+  width: 50%;
+  padding: 6px 0;
+  border: 1px solid #ccc;
+  outline: 10px;
+}
+
 /* 
 @-webkit-keyframes animate-loading {
   0% {
