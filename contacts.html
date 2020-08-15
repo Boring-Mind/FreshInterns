@@ -22,11 +22,8 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-    <link href="assets/css/icofont.min.css" rel="stylesheet" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+    <link href="assets/css/icofont.min.css" rel="stylesheet" /><!--Icofonts-->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'><!--boxicons-->
     <link href="assets/css/owl.carousel.min.css" rel="stylesheet" />
     <link href="assets/css/aos.css" rel="stylesheet" />
 
@@ -47,22 +44,10 @@
 
         <nav class="nav-menu d-none d-lg-block">
           <ul>
-            <li>
-              <a href="index.html">Home</a>
-              <hr class="nav-underline" />
-            </li>
-            <li>
-              <a href="resume.html">Resume Form</a>
-              <hr class="nav-underline" />
-            </li>
-            <li>
-              <a href="about.html">About Us</a>
-              <hr class="nav-underline" />
-            </li>
-            <li>
-              <a href="contacts.html">Contact Us</a>
-              <hr class="nav-underline" />
-            </li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume Form</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contacts.html">Contact Us</a></li>
           </ul>
         </nav>
 
@@ -83,132 +68,71 @@
 
     <main id="main">
       <section class="contact-section">
-        <div class="row" id="contact">
-          <div class="col-12" data-aos="fade-up" data-aos-delay="100">
-            <h2 class="contact-title">Get in Touch</h2>
-          </div>
-          <div class="col-lg-8">
-            <form
-              class="form-contact contact_form"
-              action="contact_process.php"
-              method="post"
-              id="contactForm"
-              novalidate="novalidate"
-            >
-              <div class="row" data-aos="fade-up" data-aos-delay="200">
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <h3>Name:</h3>
-                    <input
-                      class="form-control valid"
-                      name="name"
-                      id="name"
-                      type="text"
-                      onfocus="this.placeholder = ''"
-                      onblur="this.placeholder = 'Enter your name'"
-                      placeholder="Enter your name"
-                    />
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <h3>Email:</h3>
-                    <input
-                      class="form-control valid"
-                      name="email"
-                      id="email"
-                      type="email"
-                      onfocus="this.placeholder = ''"
-                      onblur="this.placeholder = 'Enter email address'"
-                      placeholder="Email"
-                    />
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="form-group">
-                    <h3>Subject:</h3>
-                    <input
-                      class="form-control"
-                      name="subject"
-                      id="subject"
-                      type="text"
-                      onfocus="this.placeholder = ''"
-                      onblur="this.placeholder = 'Enter Subject'"
-                      placeholder="Enter Subject"
-                    />
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="form-group">
-                    <h3>Message:</h3>
-                    <textarea
-                      class="form-control w-100"
-                      name="message"
-                      id="message"
-                      cols="30"
-                      rows="9"
-                      onfocus="this.placeholder = ''"
-                      onblur="this.placeholder = 'Enter Message'"
-                      placeholder=" Message"
-                    ></textarea>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="form-group mt-3"
-                data-aos="fade-up"
-                data-aos-delay="200"
-              >
-                <button type="submit" class="btn button-contactForm boxed-btn">
-                  Send
-                </button>
-              </div>
-            </form>
-          </div>
+      
+                <div class="row" id="contact">
+                    <div class="col-12">
+                        <h2 class="contact-title">Get in Touch</h2>
+                    </div>
+                    <div class="col-lg-8">
+                        <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <h3>Name:</h3>
+                                        <input class="form-control valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Enter your name">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <h3>Email:</h3>
+                                        <input class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <h3>Subject:</h3>
+                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder="Enter Subject">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <h3>Message:</h3>
+                                        <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder=" Message"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <button type="submit" class="button button-contactForm boxed-btn">Send</button>
+                            </div>
+                        </form>
+                    </div>
 
-          <div class="col-lg-3 offset-lg-1">
-            <div
-              class="media contact-info"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <span class="contact-info__icon"
-                ><i class="icofont-home"></i
-              ></span>
-              <div class="media-body">
-                <h3 style="font-size: 20px;">
-                  SCO - 98 ,XYZ Street<br />
-                  NY - 960062
-                </h3>
-              </div>
+                    <div class="col-lg-3 offset-lg-1">
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="icofont-home"></i></span>
+                            <div class="media-body">
+                                <h3 style="font-size: 20px">SCO - 98 ,XYZ Street<br>
+                                NY - 960062
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="icofont-iphone"></i></span>
+                            <div class="media-body">
+                                <h3 style="font-size: 20px">+79-5986596503</h3>
+                            </div>
+                        </div>
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="icofont-email"></i></span>
+                            <div class="media-body">
+                                <h3 style="font-size: 20px">email@site.com</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div
-              class="media contact-info"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <span class="contact-info__icon"
-                ><i class="icofont-iphone"></i
-              ></span>
-              <div class="media-body">
-                <h3 style="font-size: 20px;">+79-5986596503</h3>
-              </div>
-            </div>
-            <div
-              class="media contact-info"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
-              <span class="contact-info__icon"
-                ><i class="icofont-email"></i
-              ></span>
-              <div class="media-body">
-                <h3 style="font-size: 20px;">email@site.com</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+    <!-- ================ contact section end ================= -->
     </main>
 
     <footer id="footer">
@@ -232,16 +156,19 @@
             <div class="col-lg-3 col-md-6 footer-links">
               <h4>Useful Links</h4>
               <ul>
-                <li>
+                <li><i class="bx bx-chevron-right"></i>
                   <a href="index.html">Home</a>
                 </li>
-                <li>
+                <li><i class="bx bx-chevron-right"></i>
                   <a href="about.html">About us</a>
                 </li>
-                <li>
+                <li><i class="bx bx-chevron-right"></i>
+                  <a href="#">Services</a>
+                </li>
+                <li><i class="bx bx-chevron-right"></i>
                   <a href="#">Terms of service</a>
                 </li>
-                <li>
+                <li><i class="bx bx-chevron-right"></i>
                   <a href="#">Privacy policy</a>
                 </li>
               </ul>
@@ -249,17 +176,14 @@
 
             <div class="col-lg-3 col-md-6 footer-newsletter">
               <h4>JOIN OUR NEWSLETTER</h4>
-              <p style="color: #576971; margin-top: -13px;">
-                * one message per week
+              <p>
+                one message per week
               </p>
               <form action="" method="post">
                 <input type="email" name="email" />
                 <br />
-                <input
-                  type="submit"
-                  value="Subscribe"
-                  style="border-radius: 2px; padding: 5px 15px;"
-                />
+                <!--<input type="submit" class="" value="Subscribe" />-->
+                <button type="submit" class="button button-contactForm boxed-btn subscribebtn">Subscribe</button>
               </form>
             </div>
           </div>

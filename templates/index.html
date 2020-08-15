@@ -1,0 +1,240 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}FreshInterns{% endblock title %}
+{% block content %}
+<section id="hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 hero-img" data-aos="fade-right">
+            <img src={% static "img/header.png" %} class="img-fluid" alt="" />
+          </div>
+          <div
+            class="col-lg-6 pt-5 pt-lg-0 d-flex flex-column justify-content-center"
+            data-aos="fade-left"
+          >
+            <div>
+              <h1>We help students achieving their job</h1>
+              <h2>
+                Get your first internship without pain and suffering.
+                Plenty of students gets an interesting jobs without experience. 
+                Join us!
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main id="main">
+      <section id="about" class="about">
+        <div class="container">
+          <div class="section-title" data-aos="fade-up" data-aos-delay="200">
+            <h3>Problems faced by Interns</h3>
+          </div>
+
+          <div class="row section-members">
+            <div
+              class="col-lg-6 about-img"
+              data-aos="fade-right"
+              data-aos-delay="300"
+            >
+              <img src={% static "img/header.png" %} class="img-fluid" alt="" />
+            </div>
+            <div
+              class="col-lg-6 col-md-12"
+              data-aos="fade-left"
+              data-aos-delay="300"
+            >
+              <div class="section-about">
+                <p>
+                  Not getting internships is a big problem as internships serve
+                  as an important signal that students are ready to work. In a
+                  recent study students who had an internship on their CV
+                  received 14% more offers for an interview than those who did
+                  not. According to a research doing internships also leads to
+                  higher wages than students who don’t have an internship.
+                  <br /><br />
+                  One of the worst parts of applying for internships is finding
+                  out that you can't be considered for a certain application
+                  based on your age. If you want to get an internship at a big
+                  firm, it might be much harder if you are a sophomore or a
+                  freshman. This is one frustration that can disappoint many
+                  people when they look on the application page.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row section-members">
+            <div
+              class="col-lg-6 about-img order-lg-2"
+              data-aos="fade-left"
+              data-aos-delay="450"
+            >
+              <img src={% static "img/header.png" %} class="img-fluid" alt="" />
+            </div>
+            <div
+              class="col-lg-6 col-md-12 order-lg-1"
+              data-aos="fade-right"
+              data-aos-delay="450"
+            >
+              <div class="section-about">
+                <p>
+                  Another challenge young students face is that some internships
+                  require a minimum GPA or area of study. These two problems
+                  shut off a variety of students from applying and discourage
+                  many from applying with scores that meet the requirements or
+                  just miss them.
+                  <br /><br />
+                  At FreshIntern mentors would assign tasks that challenge the
+                  intern, motivating him or her to work harder and value the
+                  internship experience more. Employers can learn about a
+                  potential employee’s work ethic, attention to detail, and
+                  other qualities through an internship. They don't have this
+                  knowledge about a candidate who has no prior work experience
+                  in the company. Employees hired through after an internship in
+                  the same company are also more loyal to the company, according
+                  to a study conducted by the NACE in 2009.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row section-members">
+            <div
+              class="col-lg-6 about-img"
+              data-aos="fade-right"
+              data-aos-delay="550"
+            >
+              <img src={% static "img/header.png" %} class="img-fluid" alt="" />
+            </div>
+            <div
+              class="col-lg-6 col-md-12"
+              data-aos="fade-left"
+              data-aos-delay="550"
+            >
+              <div class="section-about">
+                <p>
+                  <i>
+                    "After careful consideration, we regret to inform you that
+                    you have not been selected for an interview/ X position"
+                  </i>
+                  <br /><br />
+                  Does this look familiar to you?
+                  <br /><br />
+                  Finding internships is tough. You spend countless hours each
+                  week applying to internships, only to find your inbox filling
+                  with rejections.
+                  <br /><br />
+                  Let’s say you land a couple of interviews.
+                  <br /><br />
+                  You prepare as best you can, make it past a few interviews but
+                  then don’t get in. Or worse, you make it to the final round,
+                  do well, and still don’t get the offer.
+                  <br /><br />
+                  Every few weeks you go through this process and end up with
+                  the same outcome.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about section-bg">
+        <div class="container">
+          <div class="row section-members">
+            <div class="col-lg-12 col-md-24">
+              <div
+                class="section-about"
+                data-aos="zoom-in"
+                data-aos-delay="550"
+              >
+                <p>
+                  We have a solution for you, FreshIntern, we help students who
+                  have no previous work experience get internships. You visit
+                  our site(freshintern.xyz) and just input some basic
+                  information about yourself like GitHub link, wanted job role,
+                  and your LinkedIn link. In our system everything would be
+                  automatic. Interns come to our site, fill out the form, their
+                  info comes to the backend. Backend checks the intern skills,
+                  filters interns by roles and sends emails to the enterprises
+                  that wants that roles.
+                  <br /><br />
+                  The main goal of our project is to the minimise effort to get
+                  an internship. Students don't need to register on 10+ sites,
+                  they fill only one form and their resume is automatically sent
+                  to relevant small and medium enterprises.
+                  <br /><br />
+                  So whether you are a student of a small/medium enterprise what
+                  are waiting for? REGISTER NOW!
+                </p>
+              </div>
+              <div
+                style="text-align: center;"
+                data-aos="zoom-in"
+                data-aos-delay="550"
+              >
+                <a href={% url 'resume' %} class="btn">Apply for a Job</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="ww-section" class="ww-section section-bg-2">
+        <div class="container">
+          <div class="section-title" data-aos="fade-up">
+            <h2>We work with</h2>
+          </div>
+
+          <div class="row" style="padding-bottom: 2em;">
+            <div
+              class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0"
+              data-aos="zoom-in"
+            >
+              <div class="icon-box">
+                <div class="icon">
+                  <i class="icofont-brand-amazon"></i>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <div class="icon-box">
+                <div class="icon">
+                  <i class="icofont-american-express-alt"></i>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              <div class="icon-box">
+                <div class="icon">
+                  <i class="icofont-brand-android-robot"></i>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+            >
+              <div class="icon-box">
+                <div class="icon">
+                  <i class="icofont-behance"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+{% endblock content %}

@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% block title %}Resume Form - FreshInterns{% endblock title %}
+{% block content %}
+    <section id="hero">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h1>Resume Form</h1>
+        </div>
+      </div>
+    </section>
+
+    <main id="main">
+      <section id="resume" class="resume">
+        <div class="container">
+          <div class="row">
+            <div
+              class="d-flex align-items-stretch"
+              data-aos="fade-up"
+              data-aos-delay="100"
+              style="width: 100%;"
+            >
+              <form
+                action=""
+                method="post"
+                role="form"
+                style="margin-left: 50%; transform: translateX(-50%);"
+              >
+              {{ form.non_field_errors }}
+              {% csrf_token %}
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <div class="row">
+                      {{ form.github.errors }}
+                      <label for="username" class="col-md-6"
+                        >Github username</label
+                      >
+                      {{ form.github }}
+                    </div>
+                    <div class="validate"></div>
+                  </div>
+                  <div class="form-group col-md-12">
+                    <div class="row">
+                      {{ form.first_name.errors }}
+                      <label for="firstname" class="col-md-6">First name</label>
+                      {{ form.first_name }}
+                    </div>
+                    <div class="validate"></div>
+                  </div>
+                  <div class="form-group col-md-12">
+                    <div class="row">
+                      {{ form.second_name.errors }}
+                      <label for="secondname" class="col-md-6"
+                        >Second name</label
+                      >
+                      {{ form.second_name }}
+                    </div>
+                    <div class="validate"></div>
+                  </div>
+                  <div class="form-group col-md-12">
+                    <div class="row">
+                      {{ form.role.errors }}
+                      <label for="role" class="col-md-6">Role</label>
+                      {{ form.role }}
+                    </div>
+                    <div class="validate"></div>
+                  </div>
+                  <div class="form-group col-md-12">
+                    <div class="row">
+                      {{ form.email.errors }}
+                      <label for="name" class="col-md-6">Email</label>
+                      {{ form.email }}
+                    </div>
+                    <div class="validate"></div>
+                  </div>
+                  <div class="form-group col-md-12">
+                    <div class="row">
+                      {{ form.phone.errors }}
+                      <label for="phone" class="col-md-6">Phone</label>
+                      {{ form.phone }}
+                    </div>
+                    <div class="validate"></div>
+                  </div>
+                </div>
+                <!-- <div class="mb-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">
+                    Your message has been sent. Thank you!
+                  </div>
+                </div> -->
+                <div class="text-center">
+                  <button type="submit" class="btn">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+{% endblock content %}
